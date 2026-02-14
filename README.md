@@ -16,12 +16,12 @@ Getestet mit **Photobooth 4.99** und **dslrBooth**.
 
 1. **Buzzer einschalten** → startet einen **Access Point** (`Buzzer`).
 2. Mit dem Handy verbinden und die **Weboberfläche** öffnen.
-3. WLAN auswählen, mit dem sich der Buzzer verbinden soll (statische IP möglich).
-4. HTTP-Befehl für den Webserver eingeben.
-5. Optional: MQTT aktivieren und Broker-Adresse angeben.
-6. Konfiguration speichern → Buzzer startet neu und verbindet sich automatisch mit dem WLAN.
+3. WLAN auswählen, mit dem sich der Buzzer verbinden soll
+4. statische IP und Gateway eingeben.
+5. HTTP-Befehl für den Webserver eingeben.
+6. Optional: MQTT aktivieren und Broker-Adresse angeben.
+7. Konfiguration speichern → Buzzer startet neu und verbindet sich automatisch mit dem WLAN.
 
-> Hinweis: GitHub-typisch sollten hier Screenshots oder Beispiel-URLs eingefügt werden, falls verfügbar.
 
 ---
 
