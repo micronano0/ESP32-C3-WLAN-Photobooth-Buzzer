@@ -31,7 +31,9 @@ Getestet mit **Photobooth 4.99** und **dslrBooth**.
 |--------|-----------|
 | Blaue LED dauerhaft an | Buzzer erfolgreich im WLAN angemeldet |
 | Blaue LED blinkt | WLAN-Verbindung fehlgeschlagen → Access Point aktiv |
-| Blaue LED leuchtet, nicht blinkt | Buzzer im WLAN, aber z. B. falsche IP, keine Auslösung möglich |
+| Blaue LED leuchtet, nicht blinkt | Buzzer im WLAN, aber z. B. mqtt fehler |
+| 1x Piep | http Befehl erfolgreich gesendet |
+| 2x Piep | http Befehl erfolglos |
 
 ---
 
@@ -41,8 +43,9 @@ Wenn Änderungen nötig sind:
 
 1. Buzzer ausschalten  
 2. Buzzerknopf gedrückt halten  
-3. Buzzer einschalten  
-4. Mit dem Handy wieder verbinden → Weboberfläche aufrufen → Konfiguration ändern
+3. Buzzer einschalten
+4. blaue LED blinkt  
+5. Mit dem Handy wieder verbinden → Weboberfläche aufrufen → Konfiguration ändern
 
 ---
 
