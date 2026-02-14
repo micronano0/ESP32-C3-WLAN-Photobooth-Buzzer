@@ -1,0 +1,15 @@
+{
+"ssid":"deinWlan",
+"password":"deinWLAN_PWD",
+"command":"http://1.2.3.6/cmd",
+"localIP": "1.2.3.4",
+"gateway": "1.2.3.254",
+"buzzerEnabled": true,
+"mqttEnabled": true,
+"mqttServer": "1.2.3.5",
+"mqttUser": "",
+"mqttPassword": "",
+"mqttPort": 1883,
+"mqttTopic": "buzzer/state",
+"mqttPayloadSuccess": "gesendet123"
+}
