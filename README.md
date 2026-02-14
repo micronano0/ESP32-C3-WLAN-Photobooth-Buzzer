@@ -1,36 +1,59 @@
-Buzzer
+# Buzzer
 
-Ich verwende den Buzzer um Bilder auf der Fotobox auszulösen. 
-(getestet wurde Photobooth 4.99 und dslrBooth)
+Der **Buzzer** dient dazu, Bilder auf einer Fotobox auszulösen.  
+Getestet mit **Photobooth 4.99** und **dslrBooth**.
 
-der Buzzer kann:
-a)	einen http Befehl an einen Webserver senden
-b)	einen mqtt String an einen Broker senden
+---
 
+## Funktionen
 
-Bei der 1. Inbetriebnahme macht der Buzzer einen AccessPoint auf („Buzzer“) über den man sich mit dem Handy verbinden kann. 
-Über eine Weboberfläche kann man das WLAN auswählen mit dem sich der Buzzer über eine statische IP verbinden soll.
+- **HTTP-Befehl** an einen Webserver senden  
+- **MQTT-String** an einen Broker senden (optional)  
 
-Weiters gibt man den http Befehl ein, welcher an den Webserver gesendet werden soll.
+---
 
-Zusätzlich kann man mqtt aktivieren (wer’s braucht). 
+## Installation & Inbetriebnahme
 
-Wird die Eingabe gespeichert, dann startet der Buzzer neu und verbindet sich automatisch mit dem eingegebenen WLAN.
-Die blaue LED leuchtet durchgehend, wenn sich der Buzzer im WLAN anmelden konnte.
-Wurde aber zB eine falsche statische IP vorgegeben, dann ist der Buzzer zwar angemeldet, kann aber nichts machen. 
-	
+1. **Buzzer einschalten** → startet einen **Access Point** (`Buzzer`).
+2. Mit dem Handy verbinden und die **Weboberfläche** öffnen.
+3. WLAN auswählen, mit dem sich der Buzzer verbinden soll (statische IP möglich).
+4. HTTP-Befehl für den Webserver eingeben.
+5. Optional: MQTT aktivieren und Broker-Adresse angeben.
+6. Konfiguration speichern → Buzzer startet neu und verbindet sich automatisch mit dem WLAN.
 
-Um wieder auf den AccessPoint zu kommen:
-a)	Buzzer ausgeschalten
-b)	Buzzerknopf gedrückt halten und Buzzer einschalten
+> Hinweis: GitHub-typisch sollten hier Screenshots oder Beispiel-URLs eingefügt werden, falls verfügbar.
 
+---
 
-Handy wieder mit AP verbinden, Webseite aufmachen, Konfiguration ändern.
+## Statusanzeigen (LED)
 
-Konnte sich der Buzzer nicht mit dem WLAN verbinden, dann startet der AccessPoint automatisch, die blau LED blinkt.
+| Status | Bedeutung |
+|--------|-----------|
+| Blaue LED dauerhaft an | Buzzer erfolgreich im WLAN angemeldet |
+| Blaue LED blinkt | WLAN-Verbindung fehlgeschlagen → Access Point aktiv |
+| Blaue LED leuchtet, nicht blinkt | Buzzer im WLAN, aber z. B. falsche IP, keine Auslösung möglich |
 
-Wenn alles richtig konfiguriert ist und man den roten Knopf drückt, dann:
-a)	Befehl konnte erfolgreich zum Webserver gesendet werden =>  1x Piep.
-b)	Webserver nicht erreichbar => 2x Piep.
-c)	Mqtt aktiviert und Broker erreichbar => blaue LED blink 1x
-d)	Mqtt aktiviert und Broker nicht erreichbar => blaue LED bleibt leuchtend (kein blink)
+---
+
+## Zugriff auf den Access Point
+
+Wenn Änderungen nötig sind:
+
+1. Buzzer ausschalten  
+2. Buzzerknopf gedrückt halten  
+3. Buzzer einschalten  
+4. Mit dem Handy wieder verbinden → Weboberfläche aufrufen → Konfiguration ändern
+
+---
+
+## Verwendung / Auslösen
+
+Drücke den **roten Knopf**, dann passiert Folgendes:
+
+| Situation | Signal |
+|-----------|--------|
+| HTTP-Befehl erfolgreich gesendet | 1x Piepton |
+| Webserver nicht erreichbar | 2x Piepton |
+| MQTT aktiviert & Broker erreichbar | Blaue LED blinkt 1x |
+| MQTT aktiviert & Broker nicht erreichbar | Blaue LED leuchtet dauerhaft |
+
