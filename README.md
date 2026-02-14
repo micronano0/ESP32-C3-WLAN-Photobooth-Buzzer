@@ -60,3 +60,4 @@ Drücke den **roten Knopf**, dann passiert Folgendes:
 | MQTT aktiviert & Broker erreichbar | Blaue LED blinkt 1x |
 | MQTT aktiviert & Broker nicht erreichbar | Blaue LED leuchtet dauerhaft |
 
+![Buzzer_elektronik_fertig](bilder/Buzzer_elektronik_fertig.jpg)
